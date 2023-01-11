@@ -1,13 +1,13 @@
 # Swift Lambda API
 [<img src="http://img.shields.io/badge/swift-5.7-brightgreen.svg" alt="Swift 5.7" />](https://swift.org)
 
-This project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/) to demonstrate the basics of building a Swift based Lambda API that can requests from multiple regions. To successfully complete the steps below, you should start at the beginning of this series with the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multi-region-api) project.
+This project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/) to demonstrate the basics of building a Swift based Lambda API that can requests from multiple regions. To successfully complete the steps below, you should start at the beginning of this series with the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) project.
 
 ## Requirements
 To complete this setup you will need:
 1. Xcode 14+
 2. Docker 4+
-3. AWS CLI (setup to access the AWS account used in the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multi-region-api) project)
+3. AWS CLI (setup to access the AWS account used in the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) project)
 
 ## Getting Started
 This code will build a Swift ARM package for Graviton Lambda instances by default.
@@ -35,7 +35,7 @@ cd SwiftLambdaAPI/
 aws s3 cp .build/lambda/SwiftLamdbaAPI/lambda.zip s3://swiftlambda-us-east-2/SwiftLamdbaAPI/
 ```
 
-Make a note of the final keyPath of the upload. You will need this for the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multi-region-api) CloudFormation template.
+Make a note of the final keyPath of the upload. You will need this for the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) CloudFormation template.
 
 ## Package Dependencies
 This project makes use of:
@@ -134,7 +134,7 @@ curl -X "POST" "http://localhost:7000/invoke" \
 
 
 ## Next Steps
-As mentioned above this project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/). The next step is to go back the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multi-region-api) and complete the SwiftLambdaAPI lambda template stack with the parameter data generated here.
+As mentioned above this project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/). The next step is to go back the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) and complete the SwiftLambdaAPI lambda template stack with the parameter data generated here.
 
 
 ## Further Improvements
