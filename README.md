@@ -1,7 +1,7 @@
 # Swift Lambda API
 [<img src="http://img.shields.io/badge/swift-5.7-brightgreen.svg" alt="Swift 5.7" />](https://swift.org)
 
-This project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/) to demonstrate the basics of building a Swift based Lambda API that can requests from multiple regions. To successfully complete the steps below, you should start at the beginning of this series with the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) project.
+This project is part of the [Swift in the Cloud Series](https://www.flew.cloud/swift-server-cloud/) to demonstrate the basics of building a Swift based Lambda API that can requests from multiple regions. To successfully complete the steps below, you should start at the beginning of this series with the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) project.
 
 ## Requirements
 To complete this setup you will need:
@@ -13,7 +13,7 @@ To complete this setup you will need:
 This code will build a Swift ARM package for Graviton Lambda instances by default.
 
 ## Installation
-1. Create a bucket for the project in AWS S3 in the same region you began installing your Cloudformation stacks. `swiftlambda` will be translated by the Cloudformation template as `swiftlambda-region`. Eg: if `swiftlambda` is set at the template bucketname, then `swiftlambda-us-east-2` will be the bucket name the Cloudformation template looks for in us-east-2 (Ohio).
+1. Create a bucket for the project in AWS S3 in the same region you began installing your Cloudformation stacks. `swiftdemo0` will be translated by the Cloudformation template as `swiftlambda-region`. Eg: if `swiftlambda` is set at the template bucketname, then `swiftlambda-us-east-2` will be the bucket name the Cloudformation template looks for in us-east-2 (Ohio).
 2. Clone `SwiftLambdaAPI` locally
 3. Make sure docker is running
 4. From the command line change directories into the project. 
@@ -32,7 +32,7 @@ cd SwiftLambdaAPI/
 
 # Upload to S3 via AWS CLI.
 # NB: You can also just upload the file lambda.zip via the AWS S3 Console
-aws s3 cp .build/lambda/SwiftLamdbaAPI/lambda.zip s3://swiftlambda-us-east-2/SwiftLamdbaAPI/
+aws s3 cp .build/lambda/SwiftLamdbaAPI/lambda.zip s3://swiftdemo0-us-east-2/SwiftLamdbaAPI/
 ```
 
 Make a note of the final keyPath of the upload. You will need this for the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) CloudFormation template.
@@ -134,7 +134,7 @@ curl -X "POST" "http://localhost:7000/invoke" \
 
 
 ## Next Steps
-As mentioned above this project is part of the [Swift in the Cloud Series](https://www.flue.cloud/swift-server-cloud/). The next step is to go back the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) and complete the SwiftLambdaAPI lambda template stack with the parameter data generated here.
+As mentioned above this project is part of the [Swift in the Cloud Series](https://www.flew.cloud/swift-server-cloud/). The next step is to go back the [AWS Swift Multi-Region API](https://github.com/khinkson/aws-swift-multiregion-api) and complete the SwiftLambdaAPI lambda template stack with the parameter data generated here.
 
 
 ## Further Improvements
